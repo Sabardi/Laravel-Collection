@@ -209,3 +209,38 @@ tidak jauh beda kan jangan lupa titik koma di akhir collaction nya ada kurung si
 
 
 jika penggunaan method nya nanti ya di saat latihan CRUD nya berlaku method collaction ini
+
+
+3. Nested Array Collection Method
+Beberapa method bawaan collection ada yang lebih cocok dipakai untuk element yang lebih
+kompleks
+
+Struktur seperti ini
+sebagai simulasi data yang berasal dari tabel MySQL. 
+    public function tiga(){
+        $collaction = collect([
+            ['NamaProduk' => 'Laptop Azus', 'harga' => 60000000],
+            ['NamaProduk' => 'smartphon', 'harga' => 30000000],
+            ['NamaProduk' => 'airpod', 'harga' => 5000000]
+        ]);
+
+        dump($collaction);
+    }
+
+kita bisa mengurutkan data nya juga  menggunakan method  sortBY() dan sortbyDESc()
+
+    public function tiga(){
+        $collaction = collect([
+            ['NamaProduk' => 'Laptop Azus', 'harga' => 60000000],
+            ['NamaProduk' => 'smartphon', 'harga' => 30000],
+            ['NamaProduk' => 'airpod', 'harga' => 5000000]
+        ]);
+
+        dump($collaction);
+        dump($collaction->sortBy('harga'));
+        // dari termurah sampai termahal
+
+        dump($collaction->sortByDesc('harga'));
+        // dari termahal sampai termurah 
+
+    }

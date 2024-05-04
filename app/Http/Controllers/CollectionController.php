@@ -45,6 +45,19 @@ class CollectionController extends Controller
     }
 
     public function tiga(){
+        $collaction = collect([
+            ['NamaProduk' => 'Laptop Azus', 'harga' => 60000000],
+            ['NamaProduk' => 'smartphon', 'harga' => 30000],
+            ['NamaProduk' => 'airpod', 'harga' => 5000000]
+        ]);
+
+        dump($collaction);
+        dump($collaction->sortBy('harga'));
+        // dari termurah sampai termahal
+
+        dump($collaction->sortByDesc('harga'));
+        // dari termahal sampai termurah 
+
     }
 
     public function empat(){

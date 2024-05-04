@@ -165,3 +165,44 @@ selanjut nya tinggal kita buat aja public function nya
 disini  seperti biasa membuat sebuah variabel yang menampung nilai nya 
 si array membuat variable lagi  untuk menyimpan data yang akan di collacction disini kita menggunakan collaction nya hasil nya tidak jauh beda dengan kita menampilkan array nya.
 
+
+
+2. mengakses collaction
+untuk mengakses collaction 
+cara nya sama dengan mengakses array biasa Selain itu collection juga bisa diakses menggunakan perulangan
+foreach.
+tidak jauh beda pasti nya.
+
+    public function dua(){
+
+        $colaction = [1,2,3,4,5,6,7,8,9,10,11,12];
+        echo $colaction[0]; echo "<br>";
+        echo $colaction[1]; echo "<br>";
+        echo $colaction[2]; echo "<br>";
+
+        foreach($colaction as $collact){
+            echo "$collact";
+        }
+
+    }
+
+nah bagaimana jika berbeda tipe data? hmm penasaran pasti nya
+
+ // Collection dari berbagai tipe data
+        $collection = collect(["belajar", "laravel", 1, 2, 3]);
+        echo "<br>";
+        echo "$collection";
+
+        // Collection dari associative array
+        $data = collect(
+            [
+                "nama" => "Sabardi",
+                "alamat" => "Bagu",
+                "umur" => 20,
+                "pekerjaan" => "Mahasiswa"
+            ]);
+
+            echo "<br>";
+            echo "$data";
+
+tidak jauh beda kan jangan lupa titik koma di akhir collaction nya ada kurung siku tutup dan kurung tutup (mksd lu apa min haahh) collaction([]) ini ges

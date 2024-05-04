@@ -58,6 +58,7 @@ class CollectionController extends Controller
         dump($collaction->sortByDesc('harga'));
         // dari termahal sampai termurah
 
+        // melakukan filtering data biasa nya di gunakan di database
         $harga = $collaction->filter(function ($value , $key){
             return $value['harga']>200000;
         });

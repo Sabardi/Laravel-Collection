@@ -133,3 +133,35 @@ entu secara descending.
 
 Setiap metode ini menyediakan fungsionalitas yang unik dan berguna dalam manipulasi data dalam Collection. Dengan menggunakan kombinasi dari berbagai metode ini, Anda dapat mengelola dan memanipulasi data dengan sangat efisien dalam aplikasi Laravel Anda.
 
+
+1. membuat collection
+buatlah file controller bernama CollectionController dengan perintah php artisan make:controller CollectionController (menyala abangku); kemudian seperti bisaa buka folder app/Http/Controllers/CollectionController.php
+
+eitsss jangan lupa untuk membuatkan routes nya dikarenakan apapun yg kita inginkan itu selalu melalui route terlebih dahulu. route ini di ibaratkan pelang jalan kita mau kemana hahah. cara nya seperti biasa seperti tutorial sebelum nya
+
+<?php
+
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CollectionController;
+
+Route::get('/satu', [CollectionController::class,'satu']);
+Route::get('/dua', [CollectionController::class,'dua']);
+Route::get('/tiga', [CollectionController::class,'tiga']);
+Route::get('/empat', [CollectionController::class,'empat']);
+
+cara nya jangan di ikutin ya karna lagi males ngetik untuk nentuin kelas nya kalian bisa membuat nya dengan collectionsatu dan seterus nya
+
+selanjut nya tinggal kita buat aja public function nya
+
+    public function satu(){
+        $myarray = [1,2,3,4,5,6,7,8,9,10,11,12];
+        $colaction = collect($myarray);
+
+        echo "<pre>";
+        var_dump($colaction);
+        echo "</pre>";
+    }
+
+disini  seperti biasa membuat sebuah variabel yang menampung nilai nya 
+si array membuat variable lagi  untuk menyimpan data yang akan di collacction disini kita menggunakan collaction nya hasil nya tidak jauh beda dengan kita menampilkan array nya.
+

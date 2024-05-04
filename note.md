@@ -206,3 +206,6 @@ nah bagaimana jika berbeda tipe data? hmm penasaran pasti nya
             echo "$data";
 
 tidak jauh beda kan jangan lupa titik koma di akhir collaction nya ada kurung siku tutup dan kurung tutup (mksd lu apa min haahh) collaction([]) ini ges
+
+
+jika penggunaan method nya nanti ya di saat latihan CRUD nya berlaku method collaction ini

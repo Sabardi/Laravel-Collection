@@ -56,8 +56,12 @@ class CollectionController extends Controller
         // dari termurah sampai termahal
 
         dump($collaction->sortByDesc('harga'));
-        // dari termahal sampai termurah 
+        // dari termahal sampai termurah
 
+        $harga = $collaction->filter(function ($value , $key){
+            return $value['harga']>200000;
+        });
+        dump($harga);
     }
 
     public function empat(){

@@ -244,3 +244,13 @@ kita bisa mengurutkan data nya juga  menggunakan method  sortBY() dan sortbyDESc
         // dari termahal sampai termurah 
 
     }
+
+kita juga bisa melakukan filter 
+menggunakan method filter atau pilihan yang kita mau dan memiliki syarat yang harus di penuhi jika hasil nya true maka akan di tampilkan atau di inputkan. dan jika salah tidak akan di tampilkan atau di inputkan
+
+$harga = $collaction->filter(function ($value , $key){
+            return $value['harga']>200000;
+        });
+        dump($harga);
+
+disini sy mau filter berapa sih yang harga nya lebih dari 2jt atau sebalik nya. tetapi sebelum ny kita membuatkan  function untuk menentukan key dan value nya apa yang saya maksudkan <function ($value , $key)>

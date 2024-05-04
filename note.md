@@ -254,3 +254,6 @@ $harga = $collaction->filter(function ($value , $key){
         dump($harga);
 
 disini sy mau filter berapa sih yang harga nya lebih dari 2jt atau sebalik nya. tetapi sebelum ny kita membuatkan  function untuk menentukan key dan value nya apa yang saya maksudkan <function ($value , $key)>
+
+4. Object Array Collection Method
+pembahasan yang ini seperti nya kompleks sekali karna akan membahas objek objek collaction method.  dikarenakan data yang kita dapat yaitu dari model
